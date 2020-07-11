@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FabuLandLabs"
+title:  "2018 FabuLandLabs"
 date:   2018-09-16 12:00:00 +0200
 categories: [videos]
 ---

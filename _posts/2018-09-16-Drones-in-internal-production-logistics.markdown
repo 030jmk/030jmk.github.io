@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Drones in internal production logistics"
+title:  "2018 Drones in internal production logistics"
 date:   2018-01-20 12:00:00 +0200
 categories: [videos]
 ---

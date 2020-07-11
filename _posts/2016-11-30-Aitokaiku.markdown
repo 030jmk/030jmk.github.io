@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Social Media Project: Aitokaiku"
+title:  "2016 Social Media Project: Aitokaiku"
 date:   2016-11-30 12:00:00 +0200
 categories: [videos]
 ---

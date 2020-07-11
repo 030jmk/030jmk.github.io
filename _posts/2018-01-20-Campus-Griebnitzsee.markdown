@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Social Media Project: Campus Griebnitzsee"
+title:  "2018 Social Media Project: Campus Griebnitzsee"
 date:   2018-01-20 12:00:00 +0200
 categories: [videos]
 ---

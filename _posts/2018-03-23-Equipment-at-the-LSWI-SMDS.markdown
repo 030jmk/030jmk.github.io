@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Equipment at the LSWI SMDS"
+title:  "2018 Equipment at the LSWI SMDS"
 date:   2018-03-23 12:00:00 +0200
 categories: [videos]
 ---
