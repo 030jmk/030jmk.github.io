@@ -1,29 +1,49 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+# Site settings
+title: 'Demo for jekyll-remote-theme with theme jekyll-uno'
+description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll - used via jekyll-remote-theme'
+url: ''
+baseurl: '/jekyll-uno-remote-theme-demo'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
 
-remote_theme: fongandrew/hydeout
-
-# Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The refreshed test page.'
-url:              https://030jmk.github.io
-baseurl:          '/'
+remote_theme: matthiaslischka/jekyll-uno
 
 author:
-  name:           'Jan Kopankiewicz'
-  url:            https://twitter.com/JanKopankiewicz
+  name: 'Jan Kopankiewicz'
+  #email: 
+  twitter_username: JanKopankiewicz
+  #facebook_username: 
+  github_username: 030jmk
+  #linkedin_username:  
 
-paginate:         5
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
 
 plugins:
-  - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
-
-# Sidebar link settings
-sidebar_home_link:  true
-
-plugins:
   - jekyll-remote-theme
+  - jekyll-include-cache
+  
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', '.travis.yml', 'vendor']
