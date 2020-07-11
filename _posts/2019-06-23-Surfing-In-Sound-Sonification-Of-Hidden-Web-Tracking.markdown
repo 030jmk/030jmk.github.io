@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Surfing In Sound: Sonification Of Hidden Web Tracking (2019)"
+title:  "2019 Surfing In Sound: Sonification Of Hidden Web Tracking"
 date:   2019-06-23 12:00:00 +0200
 categories: [papers]
 ---
