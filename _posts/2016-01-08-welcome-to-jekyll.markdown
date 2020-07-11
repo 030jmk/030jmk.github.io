@@ -1,7 +1,7 @@
 ---
 title:  "GNTM instagram scraping"
 date:   2020-05-12 11:02:04
-categories: [project]
+categories: [projects]
 tags: [python]
 ---
 
