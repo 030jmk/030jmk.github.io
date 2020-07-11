@@ -9,7 +9,7 @@ title:            Hydeout
 tagline:          'A Jekyll theme'
 description:      'The refreshed test page.'
 url:              https://030jmk.github.io
-baseurl:          '/hydeout'
+baseurl:          '/'
 
 author:
   name:           'Jan Kopankiewicz'
