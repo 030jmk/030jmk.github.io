@@ -25,3 +25,5 @@ plugins:
 # Sidebar link settings
 sidebar_home_link:  true
 
+plugins:
+  - jekyll-remote-theme
