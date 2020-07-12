@@ -27,7 +27,7 @@ $(document).ready(function () {
   if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
-  if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/categories.html') {
+  if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/categories') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
   $('.btn-mobile-menu').click(function () {
