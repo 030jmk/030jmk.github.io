@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "TeletADS"
+title:  "telegram bot bilboard"
 date:   2020-04-01 12:00:00 +0200
 categories: [bots and scripts]
 ---
 
-Submission for the Hack&Tell Event
+This demo is inspired by human billboards that advertise local services and businesses next to busy intersections and roads, the urge to find a better use for obsolete hardware in the form of an iPad mini (first generation), a fun project that I could present at a local hack and tell event, and eerie childhood memories of vividly colored British aliens with antennas on their heads and a screen marking the area of the stomach.
+
+The prototype makes use of a RaspberryPi which has to be connected to the internet. It hosts the Telegram bot script, a local webserver, and when necessary an access point as well. The bot script receives the incoming content and writes the text messages or links the images to the served HTML file. The HTML file gets updated whenever a new message is received. A client’s browser will reload the displayed site dependent on the set meta refresh.
+
+Future iterations may incorporate a payment system where interested advertisers pay a small sum to display their message for a specified time or at specified times. 
 
 
-WIP
 
