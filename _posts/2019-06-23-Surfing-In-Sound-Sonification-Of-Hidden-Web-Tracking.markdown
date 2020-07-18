@@ -13,7 +13,7 @@ AUTHORS: Otto Hans-Martin Lutz, Jacob Leon Kröger, Manuel Schneiderbauer, Manfr
 
 Acknowledged for supporting the technical implementation.
 
-<iframe width="640" height="300" src="https://www.youtube.com/watch?v=ug3GfEe801k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Link to explainer video](https://www.youtube.com/watch?v=ug3GfEe801k)
 
 
 
