@@ -2,9 +2,9 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Jan M. Kopankiewicz
+Jan M. Kopankiewicz
+R&D and Business Developer
 
 Show Contacts
 
