@@ -1,900 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jan M. Kopankiewicz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Kopankiewicz</title>
+    <style>
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #fff; /* White text */
+            line-height: 1.6;
+        }
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+        /* General Styles */
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+        h1, h2, h3 {
+            color: #bb86fc; /* Purple accent color */
+            margin-bottom: 15px;
+        }
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        a {
+            color: #03dac6; /* Teal link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        /* Bio Section */
+        #bio p {
+            font-size: 1.1em;
+            color: #ddd;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .experience-item p {
+            color: #ccc;
+        }
+
+        /* Projects Section */
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            margin-bottom: 5px;
+        }
+
+        .project p {
+            color: #ccc;
+        }
+
+        /* References Section */
+        .reference {
+            margin-bottom: 20px;
+        }
+
+        .reference h3 {
+            margin-bottom: 5px;
+        }
+
+        .reference p {
+            color: #ccc;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-options {
+            margin-top: 20px;
+        }
+
+        .contact-options a {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .contact-options a {
+                margin: 10px;
+                display: block;
+            }
+        }
+
+        .industry-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .industry-row {
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) 3fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .industry-header {
+            font-weight: bold;
+            font-size: 1.17em; /* Matches h3 size */
+        }
+
+        .industry-content p {
+            margin: 0.5em 0;
+        }
+
+        .project-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .project-row {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) 3fr;
+            gap: 2rem;
+            align-items: start;
+            background-color: #2a2a2a;  /* Optional: adds subtle background to help visualize the rows */
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .project-header {
+            padding-right: 1rem;
+        }
+
+        .project-header h3 {
+            margin-bottom: 0.2em;
+        }
+
+        .project-header p {
+            margin-top: 0;
+            color: #666;
+        }
+
+        .project-content {
+            border-left: 1px solid #eee;  /* Optional: adds subtle separator */
+            padding-left: 1rem;
+        }
+
+        .project-content p {
+            margin: 0.5em 0;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Jan Kopankiewicz" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Jan M. Kopankiewicz">Jan M. <br>Kopankiewicz</h1>
-
-          <p class="title">Emerging Technologist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:jan.maria.kopankiewicz@pwc.com" class="contact-link">jan.maria.kopankiewicz@pwc.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+4915120986818" class="contact-link">+49 151 20986818</a>
-            </div>
-
-          </li>
-
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Locations</p>
-
-              <address>PwC Experience Center<br>
-                Paul-Lincke-Ufer 39<br>
-                 10999 Berlin<br>Germany</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/kopankiewicz/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/jan.kopankiewicz/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-
-
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I am a Creative Technologist and Business Developer from Berlin, DE, working on client-centric experiences for a Big4 in Frankfurt, DE.
-            I enjoy bringing the right people together to build sustainable solutions and solve the many complex issues of today and tomorrow.
-          </p>
-
-          <p>
-            Enabling openness and innovation in changing dynamics, 
-            the facilitation of skills of people from diverse backgrounds to collaborate and work towards common goals, 
-            and finding missing links of knowledge in our constantly shifting digitalized world have been my 
-            favorite challenges in the past few years. </p>
-
-          <p>
-            If you want to chat about emerging tech, its challenges and opportunities, collaborative strategy workshops, UX or the latest exhibitions - be my guest and contact me through the usual channels.
-          </p>
+    <div class="container">
+        <section id="bio">
+            <h2>About Me</h2>
+            <p>
+            I am a Creative Technologist and Business Developer from Berlin, DE, working on client-centric experiences for a Big4 in Frankfurt, DE. I enjoy bringing the right people together to build sustainable solutions and solve the many complex issues of today and tomorrow.
+            <br>Enabling openness and innovation in changing dynamics, the facilitation of skills of people from diverse backgrounds to collaborate and work towards common goals, and finding missing links of knowledge in our constantly shifting digitalized world have been my favorite challenges in the past few years.
+            <br>If you want to chat about emerging tech, its challenges and opportunities, collaborative strategy workshops, UX or the latest exhibitions - be my guest and contact me through the usual channels.
+            </p>
+
+            <p>Cheers,<br><a href="assets/CV_Kopankiewicz_onepager_2024.pdf">Jan</a></p>
         </section>
 
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Creative Technology</h4>
-
-                <p class="service-item-text">
-                  Bridging the gaps between business needs and technical capabilities to engage and delight stakeholders.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Business development</h4>
-
-                <p class="service-item-text">
-                  Identifying opportunities, nurturing relationships, and driving strategic growth.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Workshop facilitation</h4>
-
-                <p class="service-item-text">
-                  Structuring open discussions or brainstorming with processes that lead to clearer decisions and better outcomes.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I enjoy creating portraits and diving into the creative aspect of image creation using old and new media.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Yong Hee P.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    The project wouldn't have got a high remark from the client without your support!
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Eric S.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    You inspire both yourself and others with your passion for innovation and emerging topics such as VR, Metaverse, IoT. Your creativity shines through in your relevant contributions and your continuous pursuit of challenges. You maintain strong relationships in various directions, consistently expanding your network within the firm and among clients.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ben B.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Thanks for hosting this one-of-a-kind workshop, Jan. After all, it seems that sketching a bike is as hard as not saying post-it. 🤣
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel F.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    An exceptional networker with robust connections across diverse sectors including cross-LoS, and cross-Territory, consistently expanding his professional network. <br>
-                    An active participant in a vast array of the firm's communication channels, always accessible for ideas, contacts, responses, and support on a wide range of creative technology topics. <br>
-                    Continuously at the forefront of industry trends, well-versed in blogs, articles, whitepapers, conferences, and social media.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+        <section id="experience">
+            <h2>Experiences</h2>
+            <div class="experience-item">
+                <h3>Business Developer and Technology Scout</h3>
+                <p>PricewaterhouseCoopers GmbH WPG - Experience Center | 2024 — Present</p>
+                <ul>
+                    <li>Partnership Development with three globally active hyperscaler alliances and national alliances to position the offerings of the consulting service.</li>
+                    <li>Guiding and facilitating internal and external planning, discovery, innovation, development, keep in touch, and
+                        agile workshops, ranging from 6 to 35 participants in Germany, The Netherlands, Spain, and virtual reality.</li>
+                    <li>Research, development, provo- and prototyping, content creation for emerging technology solutions for the global
+                        network firms.</li> 
+                </ul>
             </div>
 
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime=""></time>
-
-              <div data-modal-text>
+            <div class="experience-item">
+                <h3>Creative Technologist</h3>
+                <p>PricewaterhouseCoopers GmbH WPG - Experience Consulting - Tangible Labs | 2022 — 2023</p>
                 <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    <ul>
+                        <li>Facilitation of Design Thinking and technology discovery workshops in 🇳🇱 and 🇩🇪</li>
+                        <li>Prototype development for the pharmaceutical and automotive industry</li>
+                        <li>Customer Experience Design projects</li>
+                    </ul>
                 </p>
-              </div>
-
             </div>
 
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 service-title">Past Project Industries</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Automotive</h4>
-
-                <p class="service-item-text">
-                  R&D Future Mobility concepts in the DACH region.
-                  <br><br>
-                  Novel customer experiences with a focus on future mobility for a European automotive client.
+            <div class="experience-item">
+                <h3>Enterprise Architect</h3>
+                <p>PricewaterhouseCoopers GmbH WPG - Technology Consulting - CIO Advisory | 2021 — 2022</p>
+                <p>
+                    <ul>
+                        <li>Architectural guiding principles for federal public service entities</li>
+                        <li>Development of the BXT Enterprise Architecture Framework</li>
+                        <li>Preparation for Business Continuity Management (BSI 200-4) for clients</li>
+                    </ul>
                 </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Banking & Capital Markets</h4>
-
-                <p class="service-item-text">
-                  Anti-financial crime including money-laundering vulnerability assessments, KYC-screenings, and enforced regulatory compliance for a global financial institution.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Consumer Markets</h4>
-
-                <p class="service-item-text">
-                  New product research and development for the North American alcoholic beverage industry.
-                  <br><br>
-                  Whitepaper and vision pieces for emerging technologies in retail and consumer goods.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Financial Services</h4>
-
-                <p class="service-item-text">
-                  Company screenings, due-diligence processes, and acquisition benchmarking focused on the EMEA technology and cybersecurity sector.
-                  <br><br>
-                  Hybrid discovery workshops and technological introduction in collaboration with a major consortium of central banks in Europe.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Government and Public Services</h4>
-
-                <p class="service-item-text">
-                  Preparation for Business Continuity Management (BSI 200-4) for a federal agency.
-                  <br><br>
-                  Preparations for strategic Enterprise Architecture decisions for a federal agency.
-                  <br><br>
-                  Architectural principles and guidelines for a federal services provider.
-                  <br><br>
-                  Developments of tangible demonstrators in Public Trust and Cyber Security.
-                  <br><br>
-                  Foresight sessions for ESG esp. bioeconomy and infrastructure development in the state of Brandenburg, DE
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Technology</h4>
-
-                <p class="service-item-text">
-                  R&D of a prototype for an automated drone-based delivery system based on quad-copters and rovers.
-                  <br><br>
-                  R&D and Protype of a process automation system in the context of an Industry 4.0 work aid in a manual labor setting.
-                  <br><br>
-                  Global community revival for distributed-ledger technologies.
-                  <br><br>
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Transportation and Logistics</h4>
-
-                <p class="service-item-text">
-                  Research and Support for an East Asian railway transport services project.
-                  <br><br>
-                  Research Project for a hardware-based safety concept for urban rail transit and tramway tracks in urban environemnts.
-                </p>
-              </div>
-            </li>
-
-
-          </ul>
-
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Business Developer and Technology Scout</h4>
-              <span>PricewaterhouseCoopers GmbH WPG <br>PwC Germany Experience Center</span>
-
-              <p class="timeline-text">
-                2024 — Present
-                <br>- Partnership Development
-                <br>- Facilitation of workshops
-                <br>- Research, Development and Prototyping
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative Technologist</h4>
-              <span>PricewaterhouseCoopers GmbH WPG<br>Experience Consulting - Tangible Labs</span>
-
-              <p class="timeline-text">
-                2022 — 2023
-                <br>- Facilitation of Design Thinking and technology discovery workshops in 🇳🇱 and 🇩🇪
-                <br>- Facilitation of Sustainable Innovation trainings in 🇪🇸
-                <br>- Customer Experience Design projects 
-                
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Enterprise Architect</h4>
-              <span>PricewaterhouseCoopers GmbH WPG <br>Technology Consulting -CIO Advisory</span>
-              <p class="timeline-text">
-                2021 — 2022
-                <br>- Architectural guiding principles for federal public service entities.
-                <br>- Development of the BXT Enterprise Architecture Framework.
-                <br>- Preparation for Business Continuity Management (BSI 200-4) for clients.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Assistant</h4>
-              <span>Fraunhofer Institute for Open Communication Systems</span>
-
-              <p class="timeline-text">
-                2018 — 2021
-                <br>- Elected representative in the Scientific Council of the Weizenbaum Institute.
-                <br>- Development of privacy and cyber-security experiments.
-                <br>- Assisting research tasks and papers including DOI:10.1145/3411109.3412299.
-                <br>- Data Science, Process Mining, MITM scenarios.
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Student Assistant</h4>
-              <span>University of Potsdam</span>
-
-              <p class="timeline-text">
-                2017 — 2018
-                <br>- Chair for Business Information Systems esp. Data Science and Social Media
-                <br>- Chair for Business Information Systems esp. Processes and Systems
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <p>Fraunhofer Institute for Open Communication Systems | 2018 — 2021</p>
+                    <ul>
+                        <li>Elected representative in the Scientific Council of the Weizenbaum Institute</li>
+                        <li>Development of privacy and cyber-security experiments</li> 
+                        <li>Assisting research tasks and papers including <a href="https://doi.org/10.1145/3411109.3412299">DOI:10.1145/3411109.3412299</a></li> 
+                        <li>Data Science, Process Mining, MITM scenarios</li>
+                    </ul>
             </div>
 
-            <h3 class="h3">Academia</h3>
-          </div>
+            <div class="experience-item">
+                <h3>Student Assistant</h3>
+                <p>University of Potsdam | 2017 — 2018</p>
+                    <ul>
+                        <li>Chair for Business Information Systems esp. Data Science and Social Media</li>
+                        <li>Chair for Business Information Systems esp. Processes and Systems</li>
+                        <li>Administrative and marketing tasks during the establishment of the Weizenbaum Institute in Berlin on behalf of the University of Potsdam.</li>
+                        <li>Assisted the research groups "Digital Technologies and Well-being" and "Digital Integration" with research and
+                                information gathering activities and testing and development of an Industry 4.0 automated product.</li>
+                    </ul>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Master of Science @ University of Potsdam</h4>
-
-              <span>Business Information Systems</span>
-
-              <p class="timeline-text">
-                - First place in an international negotiation battle hosted by the university.
-                <br>- Technology Management and foresight analysis for Rohrbeck Heger GmbH.
-                <br>- Online Marketing Strategy project for a Berlin based B2B startup.
-                <br>- Conceptual planning and development for logistics prototypes.
-                <br>- Strategic foresight methods workshop for a Leibniz Institute
-                <br>- IT-Consulting project: “Performance appraisal evaluation of consulting firms”.
-                <br>- Course Focus: Data Science, Business Development.
-                <br>- Master Thesis: Modeling of workflow processes aided by computer vision.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Bachelor of Science @ University of Potsdam</h4>
-              <span>Business Administration</span>
-              <p class="timeline-text">
-                - Development of an audience-response tool at the Free University Berlin.
-                <br>- Marketing Strategy and aiding events for a sustainable e-commerce startup.
-                <br>- Leading teams of up to 9 students in a hands-on marketing project.
-                <br>- Course Focus: Sustainable Marketing Management, B2B Marketing Management, and BPM.
-                <br>- Bachelor Thesis: Risk calculation for enterprise cyber security incidents.
-
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Interprofessional Interests</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Sports: Volleyball, Swimming, Bouldering</h5>
-              </div>
-
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Volunteering: Teamer at a service for indivuals with disabilities</h5>
-              </div>
-
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Ex Football Referee for the Berliner Fußball-Verband e.V</h5>
-                <p></p>
-              </div>
-
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Travel+Food</h5>
-              </div>
-
-            </li>
-
-          </ul>
-
-          <div class="skills-item">
-            <div class="title-wrapper">
-              <div class="h5"><a href="assets/CV_Kopankiewicz_onepager_2024.pdf">.pdf</a></div>
             </div>
-          </div>
-
         </section>
 
-      </article>
+        <section id="project-industries">
+            <h2>Past Project Industries</h2>
+            <div class="industry-grid">
+                <div class="industry-row">
+                    <div class="industry-header">Automotive</div>
+                    <div class="industry-content">
+                        <p>R&D Future Mobility concepts in the DACH region.</p>
+                        <p>Novel customer experiences with a focus on future mobility for a European automotive client.</p>
+                    </div>
+                </div>
 
+                <div class="industry-row">
+                    <div class="industry-header">Banking & Capital Markets</div>
+                    <div class="industry-content">
+                        <p>Anti-financial crime including money-laundering vulnerability assessments, KYC-screenings, and enforced regulatory compliance for a global financial institution.</p>
+                    </div>
+                </div>
 
+                <div class="industry-row">
+                    <div class="industry-header">Consumer Markets</div>
+                    <div class="industry-content">
+                        <p>New product research and development for the North American alcoholic beverage industry.</p>
+                        <p>Whitepaper and vision pieces for emerging technologies in retail and consumer goods.</p>
+                    </div>
+                </div>
 
+                <div class="industry-row">
+                    <div class="industry-header">Financial Services</div>
+                    <div class="industry-content">
+                        <p>Company screenings, due-diligence processes, and acquisition benchmarking focused on the EMEA technology and cybersecurity sector.</p>
+                        <p>Hybrid discovery workshops and technological introduction in collaboration with a major consortium of central banks in Europe.</p>
+                    </div>
+                </div>
 
+                <div class="industry-row">
+                    <div class="industry-header">Government and Public Services</div>
+                    <div class="industry-content">
+                        <p>Preparation for Business Continuity Management (BSI 200-4) for a federal agency.</p>
+                        <p>Preparations for strategic Enterprise Architecture decisions for a federal agency.</p>
+                        <p>Architectural principles and guidelines for a federal services provider.</p>
+                        <p>Developments of tangible demonstrators in Public Trust and Cyber Security.</p>
+                        <p>Foresight sessions for ESG esp. bioeconomy and infrastructure development in the state of Brandenburg, DE</p>
+                    </div>
+                </div>
 
-      <!--
-        - #PORTFOLIO
-      -->
+                <div class="industry-row">
+                    <div class="industry-header">Technology</div>
+                    <div class="industry-content">
+                        <p>R&D of a prototype for an automated drone-based delivery system based on quad-copters and rovers.</p>
+                        <p>R&D and Protype of a process automation system in the context of an Industry 4.0 work aid in a manual labor setting.</p>
+                        <p>Global community revival for distributed-ledger technologies.</p>
+                    </div>
+                </div>
 
-      <article class="projects" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>TangibleTech</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="TangibleTech">
-              <a href="https://bhnt.c-base.org/2023-07-25-no89-camping-hacks">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">Random Fact GenAI Phone (2023)</h3>
-                <p class="project-category">A provotype with a retrofitted rotary dial phone to get answers from specified personas to your questions.</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/VoiceNote2Summary">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-2.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">VoiceNote2Summary Telegram Bot (2024)</h3>
-                <p class="project-category">Leveraging audio transcription and text summarization to provide a service for people with little time.</p>
-              </a>
-            </li>            
-            <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/Facts2Narration">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-3.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">Facts2Narration WebApp (2024)</h3>
-                <p class="project-category">Listen to narration optimized texts from lecture notes</p>
-              </a>
-            </li>
-             <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/Voice2Diagram">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-4.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">Voice2Diagram WebApp (2024)</h3>
-                <p class="project-category">Converts interviews into visual diagrams</p>
-              </a>
-            </li>     
-             <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/publicAmenitiesBerlin">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">Public Amenities Finder - Telegram Bot (2021)</h3>
-                <p class="project-category">Chat bot designed to assist users in Berlin by providing the locations of the nearest public amenities.</p>
-              </a>
-            </li>             
-             <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/BigRedButton">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-6.jpg" loading="lazy">
-                </figure>
-                <h3 class="project-title">Big Red Button (2024)</h3>
-                <p class="project-category">Simulating the classic Magic Eight Ball game by pressing a big red button instead</p>
-              </a>
-            </li>                
-             <li class="project-item  active" data-filter-item data-category="App">
-              <a href="https://github.com/030jmk/Voice2Diagram">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-7.png" loading="lazy">
-                </figure>
-                <h3 class="project-title">Voice2Diagram(2024)</h3>
-                <p class="project-category">Web application that converts spoken language into visual diagrams.</p>
-              </a>
-            </li> 
-
-          </ul>
-
+                <div class="industry-row">
+                    <div class="industry-header">Transportation and Logistics</div>
+                    <div class="industry-content">
+                        <p>Research and Support for an East Asian railway transport services project.</p>
+                        <p>Research Project for a hardware-based safety concept for urban rail transit and tramway tracks in urban environemnts.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-      </article>
 
+        <section id="academia">
+            <h2>Academia</h2>
+            <div class="experience-item">
+                <h3>Master of Science</h3>
+                <p>University of Potsdam | Business Information Systems</p>
+                <ul>
+                    <li>First place in an international negotiation battle hosted by the university.</li>
+                    <li>Technology Management and foresight analysis for Rohrbeck Heger GmbH</li>
+                    <li>Online Marketing Strategy project for a Berlin based B2B startup</li>
+                    <li>Conceptual planning and development for logistics prototypes</li>
+                    <li>Strategic foresight methods workshop for a Leibniz Institute</li>
+                    <li>IT-Consulting project: "Performance Appraisal Evaluation of Consulting Firms"</li>
+                    <li>Course Focus: Data Science, Business Development</li>
+                    <li>Master Thesis: "Modeling of Workflow Processes Aided by Computer Vision"</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Bachelor of Science</h3>
+                <p>University of Potsdam | Business Administration</p>
+                <ul>
+                    <li>Development of an audience-response tool at the Free University Berlin</li>
+                    <li>Marketing Strategy and aiding events for a sustainable e-commerce startup</li>
+                    <li>Leading teams of up to 9 students in a hands-on marketing project</li>
+                    <li>Course Focus: Sustainable Marketing Management, B2B Marketing Management, and BPM</li>
+                    <li>Bachelor Thesis: "Risk Calculation for Enterprise Cyber Security Incidents"</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Past Projects</h2>
+            <div class="project-grid">
+                <div class="project-row">
+                    <div class="project-header">
+                        <h3>GenAI Telephone - Retrofitting a Rotary Dial Telephone</h3>
+                        <p>Berlin Hack & Tell<br>2023</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Conceived and build a hardware demonstrator showcasing responsible AI usage, AI Ethics, Anthropomorphism of Generative AI, and data and information validity as a conversation started</p>
+                        <p>Link to the <a href="https://github.com/030jmk/genAI-telephone">GitHub Repository</a></p>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-header">
+                        <h3>Public Amenities Finder Berlin</h3>
+                        <p>Telegram Bot<br>2021</p>
+                    </div>
+                    <div class="project-content">
+                        <p>bot designed to assist users in Berlin that provides the locations of the nearest public amenities such as public toilets, water fountains, and demonstrations/protests.</p>
+                        <p>Link to the <a href="https://github.com/030jmk/publicAmenitiesBerlin">GitHub Repository</a></p>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-header">
+                        <h3>Research Papers on Privacy, Security, and Sonification</h3>
+                        <p>Fraunhofer FOKUS<br>2020</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Aided federally funded research and developed technical software and hardware demonstrators for interactive password strength sonification, online privacy and tracking, and cyber security trainings.</p>
+                        <p>Open accessible paper at <a href="https://publica.fraunhofer.de/entities/publication/dc1169a4-f113-49da-9ba5-2c5249e698db/details">Fraunhofer Publication</a></p>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-header">
+                        <h3>Presifeed - Audience Response System</h3>
+                        <p>Free University Berlin<br>2015</p>
+                    </div>
+                    <div class="project-content">
+                        <p>Bootstrapped and developed an audience response tool for universities and events capable of handling hundreds of anonymous users on affordable hardware and cloud infrastructure.</p>
+                        <p>Interview about <a href="https://www.tagesspiegel.de/berlin/bezirke/wer-nicht-fragt-bleibt-dumm-4419793.html">the project</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out!</p>
+            <div class="contact-options">
+                <a href="https://www.linkedin.com/in/kopankiewicz" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/jan.kopankiewicz" target="_blank">Instagram</a>
+
+            </div>
+        </section>
     </div>
 
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <footer>
+        <p>&copy; 2025 Jan Kopankiewicz
+        </p>
+    </footer>
 </body>
-
-</html>
+</html> 
